@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mortpion</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<div>
+		<a href="index.html">RETOUR</a>
+		<p class="play2">Joueur 1</p>
+		<p class="play1" style="text-align: right;">Joueur 2</p>
+		<button onclick=" window.location.reload();">Nouvelle partie</button>
+
+	</div>
+	
+	<table border="3px">
+		<tr>
+			<td class="" id="1"></td>
+			<td class="" id="2"></td>
+			<td class=""id="3"></td>
+		</tr>
+		<tr>
+			<td class=""id="4"></td>
+			<td class=""id="5"></td>
+			<td class=""id="6"></td>
+		</tr>
+		<tr>
+			<td class=""id="7"></td>
+			<td class=""id="8"></td>
+			<td class=""id="9"></td>
+		</tr>
+
+	</table>
+	<p id="win"></p>
+	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="js/confirme.js"></script>
+	<script type="text/javascript">
+
+		var conteneur = 0
+		var play = 0 
+		$("td").click(function () {
+			conteneur =conteneur +1 ;
+			if (conteneur%2 == 0 ) {
+			 play = 1
+		} 
+		else {
+			play = 2
+		}
+			$(this).addClass("playeur"+play);
+			
+			if ($("[id='1']").attr("class")==$("[id='2']").attr("class") && $("[id='2']").attr("class")==$("[id='3']").attr("class") && $("[id='1']").attr("class")!=""&& $("[id='2']").attr("class")!=""&& $("[id='3']").attr("class")!="" ) 
+			{
+				$("#win").text("Victoire: "+$("[id='2']").attr("class"));
+				reload($("#win").text())
+
+			}
+			if ($("[id='4']").attr("class")==$("[id='5']").attr("class") && $("[id='5']").attr("class")==$("[id='6']").attr("class") && $("[id]").attr("class")!="" && $("[id='4']").attr("class")!=""&& $("[id='5']").attr("class")!=""&& $("[id='6']").attr("class")!="") 
+			{
+				$("#win").text("Victoire: "+$("[id='5']").attr("class"));
+				reload($("#win").text())
+			}
+			if ($("[id='7']").attr("class")==$("[id='8']").attr("class") && $("[id='8']").attr("class")==$("[id='9']").attr("class") && $("[id]").attr("class")!="" && $("[id='7']").attr("class")!=""&& $("[id='8']").attr("class")!=""&& $("[id='9']").attr("class")!="") 
+			{
+				$("#win").text("Victoire: "+$("[id='8']").attr("class"));
+				reload($("#win").text())
+			}
+			if ($("[id='1']").attr("class")==$("[id='4']").attr("class") && $("[id='4']").attr("class")==$("[id='7']").attr("class") && $("[id]").attr("class")!="" && $("[id='1']").attr("class")!=""&& $("[id='4']").attr("class")!=""&& $("[id='7']").attr("class")!="") 
+			{
+				$("#win").text("Victoire: "+$("[id='4']").attr("class"));
+				reload($("#win").text())
+			}
+			if ($("[id='2']").attr("class")==$("[id='5']").attr("class") && $("[id='5']").attr("class")==$("[id='8']").attr("class") && $("[id]").attr("class")!="" && $("[id='2']").attr("class")!=""&& $("[id='5']").attr("class")!=""&& $("[id='8']").attr("class")!="") 
+			{
+				$("#win").text("Victoire: "+$("[id='5']").attr("class"));
+				reload($("#win").text())
+			}
+			if ($("[id='3']").attr("class")==$("[id='6']").attr("class") && $("[id='6']").attr("class")==$("[id='9']").attr("class") && $("[id]").attr("class")!="" && $("[id='3']").attr("class")!=""&& $("[id='6']").attr("class")!=""&& $("[id='9']").attr("class")!="") 
+			{
+				$("#win").text("Victoire: "+$("[id='6']").attr("class"));
+				reload($("#win").text())
+			}	
+			if ($("[id='1']").attr("class")==$("[id='5']").attr("class") && $("[id='5']").attr("class")==$("[id='9']").attr("class") && $("[id]").attr("class")!="" && $("[id='1']").attr("class")!=""&& $("[id='5']").attr("class")!=""&& $("[id='9']").attr("class")!="") 
+			{
+				$("#win").text("Victoire: "+$("[id='5']").attr("class"));
+				reload($("#win").text())
+			}	
+			if ($("[id='3']").attr("class")==$("[id='5']").attr("class") && $("[id='5']").attr("class")==$("[id='7']").attr("class") && $("[id]").attr("class")!="" && $("[id='3']").attr("class")!=""&& $("[id='5']").attr("class")!=""&& $("[id='7']").attr("class")!="") 
+			{
+				$("#win").text("Victoire: "+$("[id='5']").attr("class"));
+				reload($("#win").text())
+
+			}	
+					
+		});
+
+
+	</script>
+</body>
+</html>

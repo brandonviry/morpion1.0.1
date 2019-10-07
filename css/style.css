@@ -1,0 +1,81 @@
+td
+{
+	width: 150px;
+	height: 150px;
+
+
+}
+
+.playeur1
+{
+	
+	background-image:url(../img/crois.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.playeur2
+{
+	
+		background-image:url(../img/circle-outline_icon-icons.com_72813.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.play1
+{
+	background-color:#A62F03;
+}
+
+.play2
+{
+	background-color: #260505;
+}
+
+div > p 
+{
+	padding: 1em;
+	color: white;
+	font-size: 20px;
+	margin: 0px;
+
+}
+div 
+{
+	margin-bottom:  1em;
+}
+body > p  
+{
+		padding: 1em;
+		background-color: black;
+		color: white;
+	font-size: 20px;
+	margin-top: 1em;
+	text-align: center;
+}
+button 
+{
+	
+	width: 100%;
+	height:  30px;
+	font-size: 1em;
+	background-color: black;
+	color: white;
+
+}
+body
+{
+ background-color:#F2E205;
+ }
+ a
+ {
+	
+	background-color: black;
+	color: white;
+	text-decoration: none;
+	padding: 0.3em;
+
+	display: flex;
+	text-align: center;
+
+ }
